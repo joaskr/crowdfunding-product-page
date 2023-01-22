@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import logo from "../../images/logo.svg";
-import hamburgerMenu from "../../images/icon-hamburger.svg";
-// import { Link } from "react-router-dom";
+import hamburgerMenuOpen from "../../images/icon-hamburger.svg";
+import hamburgerMenuClose from "../../images/icon-close-menu.svg";
+import { Link } from "react-router-dom";
 import "./navbar.scss";
 
 function Navbar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+    setMenuOpen((prev) => !prev);
   };
 
   return (
@@ -19,13 +20,17 @@ function Navbar() {
         aria-label="menu button"
         onClick={toggleMenu}
       >
-        <img src={hamburgerMenu} alt="hamburger menu button" />
+        {isMenuOpen ? (
+          <img src={hamburgerMenuClose} alt="hamburger menu button" />
+        ) : (
+          <img src={hamburgerMenuOpen} alt="hamburger menu button" />
+        )}
       </button>
-      {/* <div className="navigation">
+      <div className={`${isMenuOpen ? "showMenu" : "noMenu"}`}>
         <Link to="/about">About</Link>
         <Link to="/discover">Discover</Link>
         <Link to="/get-started">Get Started</Link>
-      </div> */}
+      </div>
     </nav>
   );
 }
