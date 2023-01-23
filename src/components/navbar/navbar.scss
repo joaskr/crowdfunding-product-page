@@ -15,6 +15,44 @@
   display: none;
 }
 
-.menuNav.showMenu {
-  display: block;
+.showMenu {
+  width: 327px;
+  height: 212px;
+  padding: 1.5rem 0;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.0497193);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  position: absolute;
+  top: 88px;
+  margin: auto;
+  font-size: 1.125rem;
+  a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    padding: 0 1.5rem;
+  }
+}
+
+.showMenu::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+
+.nav-divider {
+  width: 100%;
+  background: #2F2F2F;
+  mix-blend-mode: normal;
+  opacity: 0.1;
 }

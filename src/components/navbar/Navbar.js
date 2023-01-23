@@ -28,7 +28,9 @@ function Navbar() {
       </button>
       <div className={`${isMenuOpen ? "showMenu" : "noMenu"}`}>
         <Link to="/about">About</Link>
+        <hr className="nav-divider" />
         <Link to="/discover">Discover</Link>
+        <hr className="nav-divider" />
         <Link to="/get-started">Get Started</Link>
       </div>
     </nav>
