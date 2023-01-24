@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" className="logo" />
       <button
         className="hamburger-btn"
         aria-label="menu button"
@@ -26,6 +26,10 @@ function Navbar() {
           <img src={hamburgerMenuOpen} alt="hamburger menu button" />
         )}
       </button>
+      <div
+        className={`${isMenuOpen ? "showOverlay" : "noMenu"}`}
+        onClick={toggleMenu}
+      ></div>
       <div className={`${isMenuOpen ? "showMenu" : "noMenu"}`}>
         <Link to="/about">About</Link>
         <hr className="nav-divider" />
