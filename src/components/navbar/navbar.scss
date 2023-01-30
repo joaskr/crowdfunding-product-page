@@ -15,6 +15,10 @@
   z-index: 1;
 }
 
+.menu {
+  display: none;
+}
+
 .noMenu {
   display: none;
 }
@@ -34,6 +38,8 @@
   position: absolute;
   top: 88px;
   font-size: 1.125rem;
+  transform: translateX(-50%);
+  left: 50%;
   a {
     font-style: normal;
     font-weight: 500;
@@ -61,4 +67,32 @@
   background: #2F2F2F;
   mix-blend-mode: normal;
   opacity: 0.1;
+}
+
+@media screen and (min-width: 769px) {
+  .navbar {
+    padding: 3rem 10.375rem;
+  }
+  .hamburger-btn {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    a {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 0.813rem;
+      color: #fff;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .nav-divider {
+    display: none;
+  }
 }

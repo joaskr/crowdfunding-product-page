@@ -30,7 +30,7 @@ function Navbar() {
         className={`${isMenuOpen ? "showOverlay" : "noMenu"}`}
         onClick={toggleMenu}
       ></div>
-      <div className={`${isMenuOpen ? "showMenu" : "noMenu"}`}>
+      <div className={`menu ${isMenuOpen ? "showMenu" : "noMenu"}`}>
         <Link to="/about">About</Link>
         <hr className="nav-divider" />
         <Link to="/discover">Discover</Link>
